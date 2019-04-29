@@ -35,7 +35,7 @@ const BookType = new GraphQLObjectType({  // function that takes
     fields: () => ({
         id: { type: GraphQLID }, 
         name: { type: GraphQLString }, 
-        genre: { type: GraphQLInt },
+        genre: { type: GraphQLString },
         author: {
             type: AuthorType, //already defined
             resolve(parent, args){
