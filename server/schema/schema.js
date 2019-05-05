@@ -94,8 +94,31 @@ const RootQuery = new GraphQLObjectType({
         }
     }
 });
+// Mutations allows data change(adding, editing, deleting)
+// must be explicit in GraphQL 
+const Mutation = new GraphQLObjectType({
+    name: 'Mutation',
+    fields: {
+        addAuthor: {
+            type: AuthorType,
+            args: {
+                name: {type: GraphQLString},
+                age: {type: GraphQLInt}
+            },
+            resolve(parent, args){
+                let author = new Author({ // Author is imported
+                    name: args.name,        // model
+                    age: args.age
+                });
+                return author.save(); // mongoose 
+            }
+
+        }
+    }
+})
 
 module.exports = new GraphQLSchema({
-    query: RootQuery  //defines which query users are allowed from                      front end
+    query: RootQuery,  //defines which query users are allowed from
+    mutation: Mutation  // front end
     
 });
