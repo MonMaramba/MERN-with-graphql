@@ -5,7 +5,7 @@ const app = express();
 const mongoose = require('mongoose');
 
 // connect to mlab database
-mongoose.connect('mongodb://Ramon:test123@ds149059.mlab.com:49059/graphql-mern');
+mongoose.connect('mongodb://Ramon:test123@ds149059.mlab.com:49059/graphql-mern', { useNewUrlParser: true });
 mongoose.connection.once('open', ()=>{
     console.log('connected to the database');
 });
