@@ -3,6 +3,10 @@ const graphqlHTTP = require('express-graphql');
 const schema = require('./schema/schema');     
 const app = express();
 const mongoose = require('mongoose');
+const cors = require('cors');
+
+// allow cross-origin requests
+app.use(cors());
 
 // connect to mlab database
 mongoose.connect('mongodb://Ramon:test123@ds149059.mlab.com:49059/graphql-mern', { useNewUrlParser: true });
