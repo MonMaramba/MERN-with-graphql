@@ -20,5 +20,13 @@ const getAuthorsQuery = gql`
     }
 }
 `
-
-export { getAuthorsQuery, getBooksQuery };
+// query variables are used to take the state values and inject to mutation.($(query variable)name(query variable):Varible type!(must have))
+const addBookMutation = gql`
+    mutation($name: String!, $genre: String!, $authorId: ID!){
+        addBook(name:$name, genre:$genre, authorId:$authorId){
+            name
+            id
+        }
+    }
+`
+export { getAuthorsQuery, getBooksQuery, addBookMutation };
