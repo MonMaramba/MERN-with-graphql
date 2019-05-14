@@ -4,7 +4,8 @@ body {
 }
 
 #main h1{
-  color: #db1717;
+  color: #0a5dbb;
+  font-size: 3em;
   text-align: center;
 }
 
@@ -24,7 +25,7 @@ body {
   margin: 12px;
   padding:10px;
   border-radius: 4px;
-  border: 1px solid #880e4f;
+  border: 1px solid #460e2c;
   box-shadow: 1px 2px 3px rgba(0,0,0,0.3);
   cursor: pointer;
   color: #880e4f;
@@ -60,7 +61,7 @@ form select, form input{
 form button{
   color: #fff;
   font-size: 2em;
-  background: #AD1457;
+  background:  rgb(5, 99, 122);
   border: 0;
   border-radius: 45%;
   cursor: pointer;
@@ -75,7 +76,7 @@ form button{
   right: 0;
   width: 40%;
   height: 100%;
-  background: #AD1457;
+  background: rgb(5, 99, 122);
   padding: 30px;
   overflow: auto;
   box-shadow: -2px -3px 5px rgba(0,0,0,0.3);
